@@ -8,11 +8,12 @@ test('ContractPages',async({page})=>{
   await page.getByRole('link', { name: ' All Contracts' }).click();
   await expect(page.locator('h2')).toContainText('Contract');
   await expect(page.locator('app-main-page')).toContainText('Create New Contract');
+  await expect(page.locator('app-main-page')).toContainText('Create New Contract');
 });
 
 
 
-
+//dsfjkslfjslkfslkf
 
 
 
