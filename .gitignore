@@ -3,3 +3,14 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/test-results/
+/playwright-report/
+/blob-report/
+/allure-results/
+/allure-report/
+/tryme.spec.ts/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
