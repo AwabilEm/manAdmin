@@ -1,0 +1,162 @@
+{
+  "config": {
+    "configFile": "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\playwright.config.ts",
+    "rootDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "dot",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "setup",
+        "name": "setup",
+        "testDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin",
+        "testIgnore": [],
+        "testMatch": [
+          "global-setup.ts"
+        ],
+        "timeout": 600000
+      },
+      {
+        "outputDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 600000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.44.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tryme.spec.ts",
+      "file": "tryme.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "test contract",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 600000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "status": "timedOut",
+                  "duration": 600584,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\utils\\dropdownHelper.ts",
+                        "column": 92,
+                        "line": 59
+                      },
+                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('p-dropdown:has(span:has-text(\"Select Studio\")) .p-dropdown-trigger')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\utils\\dropdownHelper.ts:59\n\n\u001b[0m \u001b[90m 57 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m logAndVerifyDropdownOptions(page\u001b[33m:\u001b[39m any) {\n \u001b[90m 58 |\u001b[39m   \u001b[90m// Click on the \"Select Studio\" dropdown\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'p-dropdown:has(span:has-text(\"Select Studio\")) .p-dropdown-trigger'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 |\u001b[39m\n \u001b[90m 61 |\u001b[39m\n \u001b[90m 62 |\u001b[39m\u001b[0m\n\n\u001b[2m    at logAndVerifyDropdownOptions (d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\utils\\dropdownHelper.ts:59:92)\u001b[22m\n\u001b[2m    at d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\tests\\tryme.spec.ts:46:38\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Visible dropdown options: [\n  \u001b[32m'All Studios'\u001b[39m,\n  \u001b[32m'Brentwood/Hill Center'\u001b[39m,\n  \u001b[32m'Downtown Franklin'\u001b[39m,\n  \u001b[32m'Memphis/Perkins at Poplar'\u001b[39m,\n  \u001b[32m'Houston'\u001b[39m,\n  \u001b[32m'Nashville/Green Hills'\u001b[39m,\n  \u001b[32m'Memphis/Poplar at Kirby'\u001b[39m,\n  \u001b[32m'Austin/Lakeway'\u001b[39m,\n  \u001b[32m'Dallas/Preston Center (Next to Starbucks)'\u001b[39m,\n  \u001b[32m'Chicago_Libertyville'\u001b[39m,\n  \u001b[32m'Chicago Glenview'\u001b[39m,\n  \u001b[32m'Chicago Lakeview'\u001b[39m,\n  \u001b[32m'Naples Mercato'\u001b[39m,\n  \u001b[32m'Little Rock - Chenal'\u001b[39m,\n  \u001b[32m'Charlotte/Stonecrest'\u001b[39m,\n  \u001b[32m'Birmingham/Homewood'\u001b[39m,\n  \u001b[32m'Manduu Collierville'\u001b[39m,\n  \u001b[32m'Edmond Oklahoma'\u001b[39m\n]\n"
+                    },
+                    {
+                      "text": "All expected options are visible.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-17T01:20:11.996Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\test-results\\tryme-test-contract-chromium\\test-failed-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cadc24ad768d4ba0fc0f-37aaf9668f95b86b5a5a",
+          "file": "tryme.spec.ts",
+          "line": 11,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-06-17T01:20:08.066Z",
+    "duration": 606566.3989999997,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
