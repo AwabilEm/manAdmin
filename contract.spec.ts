@@ -96,3 +96,14 @@ test.describe('Creating new contract', () => {
     
 
 });
+
+
+
+//works
+
+await page.locator('p-dropdown:has(span:has-text("Select Studio")) .p-dropdown-trigger').click();
+
+
+
+// Select "Edmond Oklahoma" from the dropdown menu
+await page.locator('.p-dropdown-item:has-text("Edmond Oklahoma")').click();
