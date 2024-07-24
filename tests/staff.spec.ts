@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { logAndVerifyDropdownOptions, selectStudio } from '../utils/dropdownHelper';
+import { logAndVerifyDropdownOptions, studioVisibilty } from '../utils/dropdownHelper';
 import { deleteStaffMember } from '../utils/deleteUser';
 
 // Define all variables
@@ -52,15 +52,15 @@ test('staffPage', async ({ page }) => {
     await logAndVerifyDropdownOptions(page);
 
     // Select studios
-    await selectStudio(page, 'Edmond Oklahoma');
-    await page.waitForTimeout(1000); // Adjust timeout for search results to load
 
-   await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();
+     await page.locator(`.p-dropdown-item:has-text("Edmond Oklahoma")`).click();
 
-  //  await page.getByLabel('All Studio').click()
-  // await selectStudio(page, 'Brentwood/Hill Center');
-  // await expect(page.getByLabel('Brentwood/Hill Center')).toBeVisible();
+    // await page.waitForTimeout(1000); // Adjust timeout for search results to load
 
+  //  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();
+  //  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();
+   await expect(page.locator(`#p-multiselect-label:has-text(Edmond Oklahoma)`)).toBeVisible();
+   
     // Verify the table heading is visible
     await expect(page.getByText('Actions Name Last Name Roles Email Creation Time Action')).toBeVisible();
   } catch (error) {
@@ -169,3 +169,275 @@ async function handleUsernameTaken(page) {
     console.error(error);
   }
 }
+
+test('Checking for requirement to be present to create a new staff', async ({page})=>{
+  await page.goto('https://admin.manduu.app/app/main/staff/all');
+  await page.getByRole('button', { name: 'Create New Staff' }).click();
+
+
+  await expect(page.getByText('Create new staff', { exact: true })).toBeVisible();
+
+
+await expect(page.getByLabel('Stress Address')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'Last Name *' }).locator('#face-value')).toBeEmpty();
+
+await expect(page.locator('app-date-picker #face-value')).toBeEmpty();
+await expect(page.locator('input[type="email"]')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'Phone Number *' }).locator('#face-value')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'Stress Address *' }).locator('#face-value')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'Stress Address 2' }).locator('#face-value')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'City *' }).locator('#face-value')).toBeEmpty();
+
+await expect( page.locator('#pn_id_17 #face-value')).toBeEmpty();
+//check the studio availabitly
+await studioVisibilty(page)
+await expect(page.locator('app-input').filter({ hasText: 'Zip code' }).locator('#face-value')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'Work Hours' }).locator('#face-value')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'Pay Rate' }).locator('#face-value')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'Employee Number' }).locator('#face-value')).toBeEmpty();
+await expect(page.locator('app-input').filter({ hasText: 'Double Session Commission' }).locator('#face-value')).toHaveValue('0');
+await expect(page.locator('app-input').filter({ hasText: 'Conversion Commission' }).locator('#face-value')).toHaveValue('0');
+await expect(page.locator('input[type="password"]').first()).toBeEmpty();
+
+await expect(page.locator('app-input').filter({ hasText: 'Confirm Password' }).locator('#face-value')).toBeEmpty();
+await expect(page.locator('div').filter({ hasText: /^Should change password on next login$/ }).getByRole('checkbox')).toBeChecked();
+await expect(page.locator('div').filter({ hasText: /^Send activation email$/ }).getByRole('checkbox')).toBeChecked();
+await expect(page.locator('div').filter({ hasText: /^Active$/ }).getByRole('checkbox')).toBeChecked();
+await expect(page.locator('div').filter({ hasText: /^Two Factor enabled$/ }).getByRole('checkbox')).not.toBeChecked();
+await expect(page.locator('div').filter({ hasText: /^Lockout enabled$/ }).getByRole('checkbox')).toBeChecked();
+
+await expect(page.getByRole('button', { name: 'Save' })).toBeVisible();
+
+
+
+
+// //state dropdown
+
+// await page.locator('#pn_id_17 #face-value').click();
+// await page.getByLabel(state).click();
+
+
+// //country
+
+// await page.locator('#pn_id_19').getByLabel('dropdown trigger').click();
+//   await page.getByLabel(country).click();
+
+//   //studio
+  
+await expect(page.getByRole('heading', { name: 'Account settings' })).toBeVisible();
+await expect(page.getByRole('heading', { name: 'Personal Information' })).toBeVisible(); 
+await expect(page.getByRole('heading', { name: 'Contact Information' })).toBeVisible();
+await expect(page.getByRole('heading', { name: 'Staff information' })).toBeVisible();
+await expect(page.getByRole('heading', { name: 'Staff Commissions' })).toBeVisible();
+})
+
+
+test('Testing Country Dropdown', async ({ page }) => {
+  // Define the expected country options
+  const expectedCountry = ['Canada', 'Mexico', 'United States'];
+
+  // Navigate to the staff management page
+  await page.goto('https://admin.manduu.app/app/main/staff/all');
+
+  // Click on 'Create New Staff' button
+  await page.locator('button:has-text("Create New Staff")').click();
+
+  // Click on country dropdown
+  await page.locator('#pn_id_19 [aria-label="dropdown trigger"]').click();
+
+  // Fetch the list of country options from the dropdown in the HTML
+  const dropdownItemsCountry = await page.locator('#pn_id_19 li[role="option"]').allTextContents();
+
+  // Extract the country names from the fetched options
+  const displayedCountry = dropdownItemsCountry.map(item => item.trim());
+
+  // Logging the comparison result
+  console.log('Expected Country Options:', expectedCountry);
+  console.log('Displayed Country Options:', displayedCountry);
+
+  // Compare displayed country options with expected country options
+  const isEqual = arraysEqual(expectedCountry, displayedCountry);
+  console.log('Are the country options equal?', isEqual);
+
+  // Assert that the displayed country options match the expected ones
+  expect(displayedCountry).toEqual(expectedCountry);
+  
+// Function to check equality of arrays
+function arraysEqual(arr1: string[], arr2: string[]): boolean {
+  if (arr1.length !== arr2.length) return false;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) return false;
+  }
+  return true;
+}
+});
+
+
+
+test('Testing Employee Type Dropdown', async ({ page }) => {
+  // Define the expected employee types
+  const expectedEmployeeTypes = ['Salary', 'Hourly'];
+
+  // Navigate to the staff management page
+  await page.goto('https://admin.manduu.app/app/main/staff/all');
+
+  // Click on 'Create New Staff' button
+  await page.locator('button:has-text("Create New Staff")').click();
+
+  // Click to show the employee type dropdown
+  await page.locator('#pn_id_21 [aria-label="dropdown trigger"]').click();
+
+  // Fetch the list of employee type options from the dropdown in the HTML
+  const dropdownItems = await page.locator('#pn_id_21 li[role="option"]').allTextContents();
+
+  // Extract the employee type names from the fetched options
+  const displayedEmployeeTypes = dropdownItems.map(item => item.trim());
+
+  // Logging the comparison result
+  console.log('Expected Employee Types:', expectedEmployeeTypes);
+  console.log('Displayed Employee Types:', displayedEmployeeTypes);
+
+  // Compare displayed employee types with expected employee types
+  const isEqual = arraysEqual(expectedEmployeeTypes, displayedEmployeeTypes);
+  console.log('Are the employee types equal?', isEqual);
+
+  // Assertion: Use Jest's expect assertion to ensure the arrays are equal
+  expect(isEqual).toBe(true);
+
+  // Function to check equality of arrays
+  function arraysEqual(arr1: string[], arr2: string[]): boolean {
+    if (arr1.length !== arr2.length) return false;
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) return false;
+    }
+    return true;
+  }
+});
+
+
+
+
+test('Testing State Type Dropdown', async ({ page }) => {
+  // Define the expected state types
+  const expectedStates = [
+    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado',
+    'Connecticut', 'Delaware', 'District Of Columbia', 'Florida', 'Georgia',
+    'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+    'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+    'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+    'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+    'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina',
+    'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington',
+    'West Virginia', 'Wisconsin', 'Wyoming'
+  ];
+
+  // Navigate to the staff management page
+  await page.goto('https://admin.manduu.app/app/main/staff/all');
+
+  // Click on 'Create New Staff' button
+  await page.locator('button:has-text("Create New Staff")').click();
+
+  // Click to show the state dropdown
+  await page.locator('#pn_id_17 #face-value').click();
+
+  // Fetch the list of state options from the dropdown in the HTML
+  const dropdownItems = await page.locator('#pn_id_17 li[role="option"]').allTextContents();
+
+  // Extract the state names from the fetched options
+  const displayedStates = dropdownItems.map(item => item.trim());
+
+  // Logging the comparison result
+  console.log('Expected States:', expectedStates);
+  console.log('Displayed States:', displayedStates);
+
+  // Compare displayed states with expected states
+  const isEqual = arraysEqual(expectedStates, displayedStates);
+  console.log('Are the state options equal?', isEqual);
+
+  // Assert that the displayed state types match the expected state types
+  expect(displayedStates). toEqual(expectedStates);
+
+  // Function to check equality of arrays
+  function arraysEqual(arr1: string[], arr2: string[]): boolean {
+    if (arr1.length !== arr2.length) return false;
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) return false;
+    }
+    return true;
+  }
+});
+
+
+
+test('Checking for studios availability', async ({ page }) => {
+
+  // Navigate to the staff management page
+  await page.goto('https://admin.manduu.app/app/main/staff/all');
+
+  // Click on 'Create New Staff' button
+  await page.getByRole('button', { name: 'Create New Staff' }).click();
+
+  // Select Studios
+  await page.locator('div').filter({ hasText: /^Studios$/ }).nth(1).click();
+  for (const studio of studios) {
+    await page.getByLabel(studio).locator('div').nth(1).click();
+  }
+
+     await page.locator('#pn_id_23 #face-value').click();
+
+  // Fetch the list of studio options from the dropdown in the HTML
+  // const dropdownItems = await page.locator('#pn_id_23 ul.p-dropdown-items li.p-dropdown-item span.ng-star-inserted').allTextContents();
+  // const dropdownItems = await page.locator('ul.p-dropdown-items li.p-dropdown-item').allInnerTexts();
+  const dropdownItems = await page.locator('#pn_id_23 li[role="option"][aria-label]').allTextContents();
+
+  console.log('dropdown iterm before trim:', dropdownItems);
+
+  // Extract the studio names from the fetched options
+  const displayedStudios = dropdownItems.map(item => item.trim());
+  console.log('dropdown iterm after trim:', displayedStudios);
+
+  // Compare displayed studios with declared studios
+  const isEqual = arraysEqual(studios, displayedStudios);
+
+  // Logging the comparison result
+  console.log('Declared Studios:', studios);
+  console.log('Displayed Studios:', displayedStudios);
+  console.log('Are the studios equal?', isEqual);
+
+  // Assertion: Use Jest's expect assertion to ensure the arrays are equal
+  expect(isEqual).toBe(true);
+
+  // Function to check equality of arrays
+  function arraysEqual(arr1: string[], arr2: string[]): boolean {
+    if (arr1.length !== arr2.length) return false;
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) return false;
+    }
+    return true;
+  }
+});
+
+
+
+test('test try', async({page})=>{
+
+   // Navigate to the staff management page
+   await page.goto('https://admin.manduu.app/app/main/staff/all');
+
+   // Click on 'Create New Staff' button
+   await page.getByRole('button', { name: 'Create New Staff' }).click();
+ 
+   await page.locator('div').filter({ hasText: /^Studios$/ }).nth(1).click();
+
+    // Select studios
+    await page.getByLabel("Edmond Oklahoma").locator('div').nth(1).click();
+   
+  const element = page.locator('.p-multiselect-label', { hasText: 'Edmond Oklahoma' });
+  await expect(element).toBeVisible();
+   
+});
+
+
+
+
+  

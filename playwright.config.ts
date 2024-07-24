@@ -4,6 +4,10 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
+
+// attachments outputDir and report outputFile used same folder
+const date = new Date().toISOString().slice(0, 10); //2022-10-10
+const outputDir = `./test-results/${date}`;
 require('dotenv').config();
 
 /**
@@ -22,11 +26,16 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
+    ['monocart-reporter', {  
+      name: `My Test Report ${date}`,
+      outputFile: `${outputDir}/index.html`
+  }],
    ['html'],
   ['dot'],
   ['list'],
   ['allure-playwright'],
   ['json',{outputFile: 'report.json'}]
+
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
