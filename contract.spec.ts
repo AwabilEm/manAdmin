@@ -106,4 +106,8 @@ await page.locator('p-dropdown:has(span:has-text("Select Studio")) .p-dropdown-t
 
 
 // Select "Edmond Oklahoma" from the dropdown menu
+<<<<<<< HEAD
 await page.locator('.p-dropdown-item:has-text("Edmond Oklahoma")').click();
+=======
+await page.locator('.p-dropdown-item:has-text("Edmond Oklahoma")').click();
+>>>>>>> b8fa72c34091411b2d4dcf76ee399f3df58de4e1
