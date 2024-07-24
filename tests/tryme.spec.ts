@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { logAndVerifyDropdownOptions,selectStudio } from '../utils/dropdownHelper';
+import { logAndVerifyDropdownOptions } from '../utils/dropdownHelper';
 
 
 
@@ -17,10 +17,10 @@ test('test contract',async({page})=>{
   
     // Use the selectStudio function to select "Edmond Oklahoma"
   await logAndVerifyDropdownOptions(page);
-  await selectStudio(page, 'Edmond Oklahoma');
-// await page.locator('p-dropdown:has(span:has-text("Select Studio")) .p-dropdown-trigger').click();
+  //await selectStudio(page, 'Edmond Oklahoma');
+ await page.locator('p-dropdown:has(span:has-text("Select Studio")) .p-dropdown-trigger').click();
   
-//   await page.locator('.p-dropdown-item:has-text("Edmond Oklahoma")').click();
+  await page.locator('.p-dropdown-item:has-text("Edmond Oklahoma")').click();
 
 
   

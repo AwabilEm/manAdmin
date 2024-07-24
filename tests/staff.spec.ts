@@ -211,18 +211,7 @@ await expect(page.getByRole('button', { name: 'Save' })).toBeVisible();
 
 
 
-// //state dropdown
 
-// await page.locator('#pn_id_17 #face-value').click();
-// await page.getByLabel(state).click();
-
-
-// //country
-
-// await page.locator('#pn_id_19').getByLabel('dropdown trigger').click();
-//   await page.getByLabel(country).click();
-
-//   //studio
   
 await expect(page.getByRole('heading', { name: 'Account settings' })).toBeVisible();
 await expect(page.getByRole('heading', { name: 'Personal Information' })).toBeVisible(); 
