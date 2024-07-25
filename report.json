@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\playwright.config.ts",
-    "rootDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin/tests",
+    "configFile": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/playwright.config.ts",
+    "rootDir": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -16,10 +16,10 @@
     "preserveOutput": "always",
     "reporter": [
       [
-        "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\node_modules\\monocart-reporter\\lib\\index.js",
+        "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/node_modules/monocart-reporter/lib/index.js",
         {
-          "name": "My Test Report 2024-07-06",
-          "outputFile": "./test-results/2024-07-06/index.html"
+          "name": "My Test Report 2024-07-24",
+          "outputFile": "./test-results/2024-07-24/index.html"
         }
       ],
       [
@@ -35,7 +35,7 @@
         null
       ],
       [
-        "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/node_modules/allure-playwright/dist/cjs/index.js",
         null
       ],
       [
@@ -52,13 +52,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin/test-results",
+        "outputDir": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "setup",
         "name": "setup",
-        "testDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin",
+        "testDir": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin",
         "testIgnore": [],
         "testMatch": [
           "global-setup.ts"
@@ -66,13 +66,13 @@
         "timeout": 600000
       },
       {
-        "outputDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin/test-results",
+        "outputDir": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "d:/QA_LEARNING/Playwrite/admin/manAdmin/tests",
+        "testDir": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -87,6 +87,46 @@
     "webServer": null
   },
   "suites": [
+    {
+      "title": "../global-setup.ts",
+      "file": "../global-setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 600000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 51994,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-07-24T18:01:20.342Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "13722ad43cd6b8b1aa42-d4801ea111b753ac1a24",
+          "file": "../global-setup.ts",
+          "line": 3,
+          "column": 9
+        }
+      ]
+    },
     {
       "title": "staff.spec.ts",
       "file": "staff.spec.ts",
@@ -106,37 +146,44 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 8,
+                  "workerIndex": 1,
                   "status": "failed",
-                  "duration": 298010,
+                  "duration": 48954,
                   "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('button', { name: 'Create New Staff' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('button', { name: 'Create New Staff' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n    at d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\tests\\staff.spec.ts:43:74",
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:62:81",
                     "location": {
-                      "file": "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\tests\\staff.spec.ts",
-                      "column": 74,
-                      "line": 43
+                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                      "column": 81,
+                      "line": 62
                     },
-                    "snippet": "\u001b[0m \u001b[90m 41 |\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[90m// Verify the Create New Staff button is visible\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[90m// Verify the Search textbox is empty\u001b[39m\n \u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Search...'\u001b[39m }))\u001b[33m.\u001b[39mtoBeEmpty()\u001b[33m;\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[90m//  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[90m//  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m    \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m`#p-multiselect-label:has-text(Edmond Oklahoma)`\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m    \n \u001b[90m 64 |\u001b[39m     \u001b[90m// Verify the table heading is visible\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Actions Name Last Name Roles Email Creation Time Action'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\tests\\staff.spec.ts",
-                        "column": 74,
-                        "line": 43
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 81,
+                        "line": 62
                       },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('button', { name: 'Create New Staff' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 41 |\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[90m// Verify the Create New Staff button is visible\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[90m// Verify the Search textbox is empty\u001b[39m\n \u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Search...'\u001b[39m }))\u001b[33m.\u001b[39mtoBeEmpty()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\tests\\staff.spec.ts:43:74\u001b[22m"
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\u001b[22m\n\n\n\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[90m//  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[90m//  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m    \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m`#p-multiselect-label:has-text(Edmond Oklahoma)`\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m    \n \u001b[90m 64 |\u001b[39m     \u001b[90m// Verify the table heading is visible\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Actions Name Last Name Roles Email Creation Time Action'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:62:81\u001b[22m"
                     }
                   ],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "Visible dropdown options: [\n  \u001b[32m'All Studios'\u001b[39m,\n  \u001b[32m'Brentwood/Hill Center'\u001b[39m,\n  \u001b[32m'Downtown Franklin'\u001b[39m,\n  \u001b[32m'Memphis/Perkins at Poplar'\u001b[39m,\n  \u001b[32m'Houston'\u001b[39m,\n  \u001b[32m'Nashville/Green Hills'\u001b[39m,\n  \u001b[32m'Memphis/Poplar at Kirby'\u001b[39m,\n  \u001b[32m'Austin/Lakeway'\u001b[39m,\n  \u001b[32m'Dallas/Preston Center (Next to Starbucks)'\u001b[39m,\n  \u001b[32m'Chicago_Libertyville'\u001b[39m,\n  \u001b[32m'Chicago Glenview'\u001b[39m,\n  \u001b[32m'Chicago Lakeview'\u001b[39m,\n  \u001b[32m'Naples Mercato'\u001b[39m,\n  \u001b[32m'Little Rock - Chenal'\u001b[39m,\n  \u001b[32m'Charlotte/Stonecrest'\u001b[39m,\n  \u001b[32m'Birmingham/Homewood'\u001b[39m,\n  \u001b[32m'Manduu Collierville'\u001b[39m,\n  \u001b[32m'Edmond Oklahoma'\u001b[39m,\n  \u001b[32m'Migrate Test Studio'\u001b[39m\n]\n"
+                    },
+                    {
+                      "text": "All expected options are visible.\n"
+                    }
+                  ],
                   "stderr": [
                     {
-                      "text": "Error occurred during staffPage test: ExpectError: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('button', { name: 'Create New Staff' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n    at \u001b[90md:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\\u001b[39mtests\\staff.spec.ts:43:74 {\n  matcherResult: {\n    message: \u001b[32m'\\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m'\\n'\u001b[39m +\n      \u001b[32m\"Locator: getByRole('button', { name: 'Create New Staff' })\\n\"\u001b[39m +\n      \u001b[32m'Expected: visible\\n'\u001b[39m +\n      \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n      \u001b[32m'Call log:\\n'\u001b[39m +\n      \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m\"\\x1B[2m  - waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m,\n    pass: \u001b[33mfalse\u001b[39m,\n    actual: \u001b[32m'hidden'\u001b[39m,\n    name: \u001b[32m'toBeVisible'\u001b[39m,\n    expected: \u001b[32m'visible'\u001b[39m,\n    log: [\n      \u001b[32m'expect.toBeVisible with timeout 5000ms'\u001b[39m,\n      \u001b[32m\"waiting for getByRole('button', { name: 'Create New Staff' })\"\u001b[39m\n    ],\n    timeout: \u001b[33m5000\u001b[39m\n  },\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'expect@18'\u001b[39m,\n    category: \u001b[32m'expect'\u001b[39m,\n    title: \u001b[32m'expect.toBeVisible'\u001b[39m,\n    params: \u001b[90mundefined\u001b[39m,\n    wallTime: \u001b[33m1720285037314\u001b[39m,\n    infectParentStepsWithError: \u001b[90mundefined\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    location: {\n      file: \u001b[32m'd:\\\\QA_LEARNING\\\\Playwrite\\\\admin\\\\manAdmin\\\\tests\\\\staff.spec.ts'\u001b[39m,\n      line: \u001b[33m43\u001b[39m,\n      column: \u001b[33m74\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    steps: [ \u001b[36m[Object]\u001b[39m ],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1720285042406\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: \\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"Locator: getByRole('button', { name: 'Create New Staff' })\\n\"\u001b[39m +\n        \u001b[32m'Expected: visible\\n'\u001b[39m +\n        \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: \\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"Locator: getByRole('button', { name: 'Create New Staff' })\\n\"\u001b[39m +\n        \u001b[32m'Expected: visible\\n'\u001b[39m +\n        \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at d:\\\\QA_LEARNING\\\\Playwrite\\\\admin\\\\manAdmin\\\\tests\\\\staff.spec.ts:43:74'\u001b[39m\n    }\n  }\n}\n"
+                      "text": "Error occurred during staffPage test: ExpectError: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\u001b[22m\n\n    at \u001b[90m/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:62:81 {\n  matcherResult: {\n    message: \u001b[32m'\\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m'\\n'\u001b[39m +\n      \u001b[32m\"Locator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\n\"\u001b[39m +\n      \u001b[32m'Expected: visible\\n'\u001b[39m +\n      \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n      \u001b[32m'Call log:\\n'\u001b[39m +\n      \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m\"\\x1B[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\x1B[22m\\n\"\u001b[39m,\n    pass: \u001b[33mfalse\u001b[39m,\n    actual: \u001b[32m'hidden'\u001b[39m,\n    name: \u001b[32m'toBeVisible'\u001b[39m,\n    expected: \u001b[32m'visible'\u001b[39m,\n    log: [\n      \u001b[32m'expect.toBeVisible with timeout 5000ms'\u001b[39m,\n      \u001b[32m\"waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\"\u001b[39m\n    ],\n    timeout: \u001b[33m5000\u001b[39m\n  },\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'expect@34'\u001b[39m,\n    category: \u001b[32m'expect'\u001b[39m,\n    title: \u001b[32m'expect.toBeVisible'\u001b[39m,\n    params: \u001b[90mundefined\u001b[39m,\n    wallTime: \u001b[33m1721844177501\u001b[39m,\n    infectParentStepsWithError: \u001b[90mundefined\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    location: {\n      file: \u001b[32m'/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts'\u001b[39m,\n      line: \u001b[33m62\u001b[39m,\n      column: \u001b[33m81\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    steps: [ \u001b[36m[Object]\u001b[39m ],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1721844182515\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: \\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"Locator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\n\"\u001b[39m +\n        \u001b[32m'Expected: visible\\n'\u001b[39m +\n        \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: \\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"Locator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\n\"\u001b[39m +\n        \u001b[32m'Expected: visible\\n'\u001b[39m +\n        \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:62:81'\u001b[39m\n    }\n  }\n}\n"
                     }
                   ],
                   "retry": 0,
-                  "startTime": "2024-07-06T16:52:25.035Z",
+                  "startTime": "2024-07-24T18:02:13.698Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -145,9 +192,9 @@
                     }
                   ],
                   "errorLocation": {
-                    "file": "d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\tests\\staff.spec.ts",
-                    "column": 74,
-                    "line": 43
+                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                    "column": 81,
+                    "line": 62
                   }
                 }
               ],
@@ -161,7 +208,7 @@
         },
         {
           "title": "creating a new staff",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -172,29 +219,44 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 251812,
-                  "errors": [],
-                  "stdout": [
+                  "workerIndex": 2,
+                  "status": "timedOut",
+                  "duration": 30223361,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
                     {
-                      "text": "Waiting for the pop-up to appear...\n"
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
                     },
                     {
-                      "text": "No pop-up appeared after saving\n"
+                      "location": {
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 64,
+                        "line": 96
+                      },
+                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 94 |\u001b[39m \u001b[90m// Function to fill in staff details\u001b[39m\n \u001b[90m 95 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillStaffDetails(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 96 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 97 |\u001b[39m\n \u001b[90m 98 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Stress Address'\u001b[39m)\u001b[33m.\u001b[39mfill(firstName)\u001b[33m;\u001b[39m\n \u001b[90m 99 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-input'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'Last Name *'\u001b[39m })\u001b[33m.\u001b[39mlocator(\u001b[32m'#face-value'\u001b[39m)\u001b[33m.\u001b[39mfill(lastName)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at fillStaffDetails (/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:96:64)\u001b[22m\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:80:11\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [
                     {
-                      "text": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('.swal2-popup') to be visible\u001b[22m\n\n    at handleUsernameTaken \u001b[90m(d:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\\u001b[39mtests\\staff.spec.ts:141:16\u001b[90m)\u001b[39m\n    at \u001b[90md:\\QA_LEARNING\\Playwrite\\admin\\manAdmin\\\u001b[39mtests\\staff.spec.ts:86:11 {\n  name: \u001b[32m'TimeoutError'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@74'\u001b[39m,\n    location: {\n      file: \u001b[32m'd:\\\\QA_LEARNING\\\\Playwrite\\\\admin\\\\manAdmin\\\\tests\\\\staff.spec.ts'\u001b[39m,\n      line: \u001b[33m141\u001b[39m,\n      column: \u001b[33m16\u001b[39m,\n      function: \u001b[32m'handleUsernameTaken'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(.swal2-popup)'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'.swal2-popup'\u001b[39m, timeout: \u001b[33m10000\u001b[39m },\n    wallTime: \u001b[33m1720285298793\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [ \u001b[36m[Object]\u001b[39m ],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1720285308889\u001b[39m,\n    error: {\n      message: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for locator('.swal2-popup') to be visible\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for locator('.swal2-popup') to be visible\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at handleUsernameTaken (d:\\\\QA_LEARNING\\\\Playwrite\\\\admin\\\\manAdmin\\\\tests\\\\staff.spec.ts:141:16)\\n'\u001b[39m +\n        \u001b[32m'    at d:\\\\QA_LEARNING\\\\Playwrite\\\\admin\\\\manAdmin\\\\tests\\\\staff.spec.ts:86:11'\u001b[39m\n    }\n  }\n}\n"
+                      "text": "Error occurred during creating a new staff: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n    at fillStaffDetails \u001b[90m(/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:96:64\u001b[90m)\u001b[39m\n    at \u001b[90m/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:80:11 {\n  name: \u001b[32m'Error'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@12'\u001b[39m,\n    location: {\n      file: \u001b[32m'/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts'\u001b[39m,\n      line: \u001b[33m96\u001b[39m,\n      column: \u001b[33m64\u001b[39m,\n      function: \u001b[32m'fillStaffDetails'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"locator.getByRole('button', { name: 'Create New Staff' }).click\"\u001b[39m,\n    apiName: \u001b[32m'locator.click'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:role=button[name=\"Create New Staff\"i]'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m\n    },\n    wallTime: \u001b[33m1721844206581\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [ \u001b[36m[Object]\u001b[39m ],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1721874406666\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: locator.click: Test timeout of 600000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: locator.click: Test timeout of 600000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at fillStaffDetails (/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:96:64)\\n'\u001b[39m +\n        \u001b[32m'    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:80:11'\u001b[39m\n    }\n  }\n}\n"
                     }
                   ],
                   "retry": 0,
-                  "startTime": "2024-07-06T16:57:36.407Z",
-                  "attachments": []
+                  "startTime": "2024-07-24T18:03:03.235Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "../staff-creating-a-new-staff-chromium/test-failed-1.png"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "2545a61da953aa54eb88-189f8b624bab4e58c42a",
@@ -204,7 +266,7 @@
         },
         {
           "title": "Checking for requirement to be present to create a new staff",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -215,25 +277,40 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 139415,
-                  "errors": [],
-                  "stdout": [
+                  "workerIndex": 3,
+                  "status": "timedOut",
+                  "duration": 3238001,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
                     {
-                      "text": "Visible dropdown options: [\n  \u001b[32m'Migrate Test Studio'\u001b[39m,\n  \u001b[32m'Austin/Lakeway'\u001b[39m,\n  \u001b[32m'Houston'\u001b[39m,\n  \u001b[32m'Chicago_Libertyville'\u001b[39m,\n  \u001b[32m'Chicago Lakeview'\u001b[39m,\n  \u001b[32m'Dallas/Preston Center (Next to Starbucks)'\u001b[39m,\n  \u001b[32m'Chicago Glenview'\u001b[39m,\n  \u001b[32m'Charlotte/Stonecrest'\u001b[39m,\n  \u001b[32m'Birmingham/Homewood'\u001b[39m,\n  \u001b[32m'Edmond Oklahoma'\u001b[39m,\n  \u001b[32m'Little Rock - Chenal'\u001b[39m,\n  \u001b[32m'Nashville/Green Hills'\u001b[39m,\n  \u001b[32m'Memphis/Poplar at Kirby'\u001b[39m,\n  \u001b[32m'Memphis/Perkins at Poplar'\u001b[39m,\n  \u001b[32m'Downtown Franklin'\u001b[39m,\n  \u001b[32m'Naples Mercato'\u001b[39m,\n  \u001b[32m'Brentwood/Hill Center'\u001b[39m,\n  \u001b[32m'Manduu Collierville'\u001b[39m\n]\n"
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
                     },
                     {
-                      "text": "All expected options are visible.\n"
+                      "location": {
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 14,
+                        "line": 174
+                      },
+                      "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m test(\u001b[32m'Checking for requirement to be present to create a new staff'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 176 |\u001b[39m\n \u001b[90m 177 |\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:174:14\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-06T17:01:49.279Z",
-                  "attachments": []
+                  "startTime": "2024-07-25T02:26:47.396Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "../staff-Checking-for-require-ee4b3-esent-to-create-a-new-staff-chromium/test-failed-1.png"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "2545a61da953aa54eb88-3015b106db2b385aa350",
@@ -243,7 +320,7 @@
         },
         {
           "title": "Testing Country Dropdown",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -254,38 +331,58 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 126584,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Expected Country Options: [ \u001b[32m'Canada'\u001b[39m, \u001b[32m'Mexico'\u001b[39m, \u001b[32m'United States'\u001b[39m ]\n"
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 380,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:229:14",
+                    "location": {
+                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                      "column": 14,
+                      "line": 229
                     },
+                    "snippet": "\u001b[0m \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 229 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 230 |\u001b[39m\n \u001b[90m 231 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 232 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "Displayed Country Options: [ \u001b[32m'Canada'\u001b[39m, \u001b[32m'Mexico'\u001b[39m, \u001b[32m'United States'\u001b[39m ]\n"
-                    },
-                    {
-                      "text": "Are the country options equal? \u001b[33mtrue\u001b[39m\n"
+                      "location": {
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 14,
+                        "line": 229
+                      },
+                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 229 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 230 |\u001b[39m\n \u001b[90m 231 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 232 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:229:14\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-06T17:04:08.867Z",
-                  "attachments": []
+                  "startTime": "2024-07-25T03:20:46.078Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "../staff-Testing-Country-Dropdown-chromium/test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                    "column": 14,
+                    "line": 229
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "2545a61da953aa54eb88-ed9824d5601f784df287",
           "file": "staff.spec.ts",
-          "line": 235,
+          "line": 224,
           "column": 5
         },
         {
           "title": "Testing Employee Type Dropdown",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -296,38 +393,58 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 140394,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Expected Employee Types: [ \u001b[32m'Salary'\u001b[39m, \u001b[32m'Hourly'\u001b[39m ]\n"
+                  "workerIndex": 5,
+                  "status": "failed",
+                  "duration": 357,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:271:14",
+                    "location": {
+                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                      "column": 14,
+                      "line": 271
                     },
+                    "snippet": "\u001b[0m \u001b[90m 269 |\u001b[39m\n \u001b[90m 270 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 271 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 272 |\u001b[39m\n \u001b[90m 273 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 274 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "Displayed Employee Types: [ \u001b[32m'Salary'\u001b[39m, \u001b[32m'Hourly'\u001b[39m ]\n"
-                    },
-                    {
-                      "text": "Are the employee types equal? \u001b[33mtrue\u001b[39m\n"
+                      "location": {
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 14,
+                        "line": 271
+                      },
+                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 269 |\u001b[39m\n \u001b[90m 270 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 271 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 272 |\u001b[39m\n \u001b[90m 273 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 274 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:271:14\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-06T17:06:15.589Z",
-                  "attachments": []
+                  "startTime": "2024-07-25T03:20:47.028Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "../staff-Testing-Employee-Type-Dropdown-chromium/test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                    "column": 14,
+                    "line": 271
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "2545a61da953aa54eb88-eba602b37e0cf75f36df",
           "file": "staff.spec.ts",
-          "line": 277,
+          "line": 266,
           "column": 5
         },
         {
           "title": "Testing State Type Dropdown",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -338,38 +455,58 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 134516,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Expected States: [\n  \u001b[32m'Alabama'\u001b[39m,        \u001b[32m'Alaska'\u001b[39m,         \u001b[32m'Arizona'\u001b[39m,\n  \u001b[32m'Arkansas'\u001b[39m,       \u001b[32m'California'\u001b[39m,     \u001b[32m'Colorado'\u001b[39m,\n  \u001b[32m'Connecticut'\u001b[39m,    \u001b[32m'Delaware'\u001b[39m,       \u001b[32m'District Of Columbia'\u001b[39m,\n  \u001b[32m'Florida'\u001b[39m,        \u001b[32m'Georgia'\u001b[39m,        \u001b[32m'Hawaii'\u001b[39m,\n  \u001b[32m'Idaho'\u001b[39m,          \u001b[32m'Illinois'\u001b[39m,       \u001b[32m'Indiana'\u001b[39m,\n  \u001b[32m'Iowa'\u001b[39m,           \u001b[32m'Kansas'\u001b[39m,         \u001b[32m'Kentucky'\u001b[39m,\n  \u001b[32m'Louisiana'\u001b[39m,      \u001b[32m'Maine'\u001b[39m,          \u001b[32m'Maryland'\u001b[39m,\n  \u001b[32m'Massachusetts'\u001b[39m,  \u001b[32m'Michigan'\u001b[39m,       \u001b[32m'Minnesota'\u001b[39m,\n  \u001b[32m'Mississippi'\u001b[39m,    \u001b[32m'Missouri'\u001b[39m,       \u001b[32m'Montana'\u001b[39m,\n  \u001b[32m'Nebraska'\u001b[39m,       \u001b[32m'Nevada'\u001b[39m,         \u001b[32m'New Hampshire'\u001b[39m,\n  \u001b[32m'New Jersey'\u001b[39m,     \u001b[32m'New Mexico'\u001b[39m,     \u001b[32m'New York'\u001b[39m,\n  \u001b[32m'North Carolina'\u001b[39m, \u001b[32m'North Dakota'\u001b[39m,   \u001b[32m'Ohio'\u001b[39m,\n  \u001b[32m'Oklahoma'\u001b[39m,       \u001b[32m'Oregon'\u001b[39m,         \u001b[32m'Pennsylvania'\u001b[39m,\n  \u001b[32m'Rhode Island'\u001b[39m,   \u001b[32m'South Carolina'\u001b[39m, \u001b[32m'South Dakota'\u001b[39m,\n  \u001b[32m'Tennessee'\u001b[39m,      \u001b[32m'Texas'\u001b[39m,          \u001b[32m'Utah'\u001b[39m,\n  \u001b[32m'Vermont'\u001b[39m,        \u001b[32m'Virginia'\u001b[39m,       \u001b[32m'Washington'\u001b[39m,\n  \u001b[32m'West Virginia'\u001b[39m,  \u001b[32m'Wisconsin'\u001b[39m,      \u001b[32m'Wyoming'\u001b[39m\n]\n"
+                  "workerIndex": 6,
+                  "status": "failed",
+                  "duration": 372,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:324:14",
+                    "location": {
+                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                      "column": 14,
+                      "line": 324
                     },
+                    "snippet": "\u001b[0m \u001b[90m 322 |\u001b[39m\n \u001b[90m 323 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 324 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 325 |\u001b[39m\n \u001b[90m 326 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 327 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "Displayed States: [\n  \u001b[32m'Alabama'\u001b[39m,        \u001b[32m'Alaska'\u001b[39m,         \u001b[32m'Arizona'\u001b[39m,\n  \u001b[32m'Arkansas'\u001b[39m,       \u001b[32m'California'\u001b[39m,     \u001b[32m'Colorado'\u001b[39m,\n  \u001b[32m'Connecticut'\u001b[39m,    \u001b[32m'Delaware'\u001b[39m,       \u001b[32m'District Of Columbia'\u001b[39m,\n  \u001b[32m'Florida'\u001b[39m,        \u001b[32m'Georgia'\u001b[39m,        \u001b[32m'Hawaii'\u001b[39m,\n  \u001b[32m'Idaho'\u001b[39m,          \u001b[32m'Illinois'\u001b[39m,       \u001b[32m'Indiana'\u001b[39m,\n  \u001b[32m'Iowa'\u001b[39m,           \u001b[32m'Kansas'\u001b[39m,         \u001b[32m'Kentucky'\u001b[39m,\n  \u001b[32m'Louisiana'\u001b[39m,      \u001b[32m'Maine'\u001b[39m,          \u001b[32m'Maryland'\u001b[39m,\n  \u001b[32m'Massachusetts'\u001b[39m,  \u001b[32m'Michigan'\u001b[39m,       \u001b[32m'Minnesota'\u001b[39m,\n  \u001b[32m'Mississippi'\u001b[39m,    \u001b[32m'Missouri'\u001b[39m,       \u001b[32m'Montana'\u001b[39m,\n  \u001b[32m'Nebraska'\u001b[39m,       \u001b[32m'Nevada'\u001b[39m,         \u001b[32m'New Hampshire'\u001b[39m,\n  \u001b[32m'New Jersey'\u001b[39m,     \u001b[32m'New Mexico'\u001b[39m,     \u001b[32m'New York'\u001b[39m,\n  \u001b[32m'North Carolina'\u001b[39m, \u001b[32m'North Dakota'\u001b[39m,   \u001b[32m'Ohio'\u001b[39m,\n  \u001b[32m'Oklahoma'\u001b[39m,       \u001b[32m'Oregon'\u001b[39m,         \u001b[32m'Pennsylvania'\u001b[39m,\n  \u001b[32m'Rhode Island'\u001b[39m,   \u001b[32m'South Carolina'\u001b[39m, \u001b[32m'South Dakota'\u001b[39m,\n  \u001b[32m'Tennessee'\u001b[39m,      \u001b[32m'Texas'\u001b[39m,          \u001b[32m'Utah'\u001b[39m,\n  \u001b[32m'Vermont'\u001b[39m,        \u001b[32m'Virginia'\u001b[39m,       \u001b[32m'Washington'\u001b[39m,\n  \u001b[32m'West Virginia'\u001b[39m,  \u001b[32m'Wisconsin'\u001b[39m,      \u001b[32m'Wyoming'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "Are the state options equal? \u001b[33mtrue\u001b[39m\n"
+                      "location": {
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 14,
+                        "line": 324
+                      },
+                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 322 |\u001b[39m\n \u001b[90m 323 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 324 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 325 |\u001b[39m\n \u001b[90m 326 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 327 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:324:14\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-06T17:08:36.250Z",
-                  "attachments": []
+                  "startTime": "2024-07-25T03:20:47.954Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "../staff-Testing-State-Type-Dropdown-chromium/test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                    "column": 14,
+                    "line": 324
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "2545a61da953aa54eb88-d3aab1f24604d2ccce42",
           "file": "staff.spec.ts",
-          "line": 320,
+          "line": 309,
           "column": 5
         },
         {
           "title": "Checking for studios availability",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -380,44 +517,58 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 139436,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "dropdown iterm before trim: [ \u001b[32m'Austin/Lakeway'\u001b[39m, \u001b[32m'Houston'\u001b[39m, \u001b[32m'Chicago Lakeview'\u001b[39m ]\n"
+                  "workerIndex": 7,
+                  "status": "failed",
+                  "duration": 366,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:364:14",
+                    "location": {
+                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                      "column": 14,
+                      "line": 364
                     },
+                    "snippet": "\u001b[0m \u001b[90m 362 |\u001b[39m\n \u001b[90m 363 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 364 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 365 |\u001b[39m\n \u001b[90m 366 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 367 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "dropdown iterm after trim: [ \u001b[32m'Austin/Lakeway'\u001b[39m, \u001b[32m'Houston'\u001b[39m, \u001b[32m'Chicago Lakeview'\u001b[39m ]\n"
-                    },
-                    {
-                      "text": "Declared Studios: [ \u001b[32m'Austin/Lakeway'\u001b[39m, \u001b[32m'Houston'\u001b[39m, \u001b[32m'Chicago Lakeview'\u001b[39m ]\n"
-                    },
-                    {
-                      "text": "Displayed Studios: [ \u001b[32m'Austin/Lakeway'\u001b[39m, \u001b[32m'Houston'\u001b[39m, \u001b[32m'Chicago Lakeview'\u001b[39m ]\n"
-                    },
-                    {
-                      "text": "Are the studios equal? \u001b[33mtrue\u001b[39m\n"
+                      "location": {
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 14,
+                        "line": 364
+                      },
+                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 362 |\u001b[39m\n \u001b[90m 363 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 364 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 365 |\u001b[39m\n \u001b[90m 366 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 367 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:364:14\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-06T17:10:51.175Z",
-                  "attachments": []
+                  "startTime": "2024-07-25T03:20:48.890Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "../staff-Checking-for-studios-availability-chromium/test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                    "column": 14,
+                    "line": 364
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "2545a61da953aa54eb88-1616ed61bbb4355b13a4",
           "file": "staff.spec.ts",
-          "line": 372,
+          "line": 361,
           "column": 5
         },
         {
           "title": "test try",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -428,35 +579,57 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 162034,
-                  "errors": [],
+                  "workerIndex": 8,
+                  "status": "timedOut",
+                  "duration": 3442309,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded while setting up \"context\".\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded while setting up \"context\".\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded while setting up \"context\".\u001b[39m"
+                    },
+                    {
+                      "message": "Error: Target page, context or browser has been closed"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-06T17:13:10.853Z",
+                  "startTime": "2024-07-25T03:20:49.839Z",
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "2545a61da953aa54eb88-ecad05fc0fd365d4cf20",
           "file": "staff.spec.ts",
-          "line": 422,
+          "line": 411,
           "column": 5
         }
       ]
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "message": "SyntaxError: /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/tryme.spec.ts: Missing semicolon. (40:58)\n\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Client *'\u001b[39m))\u001b[33m.\u001b[39mtoBeEmpawait expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Create ContractView ClientsView Invoice'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\u001b[0m",
+      "stack": "SyntaxError: /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/tryme.spec.ts: Missing semicolon. (40:58)\n\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Client *'\u001b[39m))\u001b[33m.\u001b[39mtoBeEmpawait expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Create ContractView ClientsView Invoice'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\u001b[0m",
+      "location": {
+        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/tryme.spec.ts",
+        "line": 40,
+        "column": 58
+      },
+      "snippet": "\u001b[90m   at \u001b[39mtryme.spec.ts:40\n\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Client *'\u001b[39m))\u001b[33m.\u001b[39mtoBeEmpawait expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Create ContractView ClientsView Invoice'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\u001b[0m"
+    }
+  ],
   "stats": {
-    "startTime": "2024-07-06T16:52:19.501Z",
-    "duration": 1414833.6580000008,
-    "expected": 7,
+    "startTime": "2024-07-24T18:01:18.914Z",
+    "duration": 37013357.598000005,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 8,
     "flaky": 0
   }
 }
