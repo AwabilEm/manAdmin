@@ -15,5 +15,7 @@ export const expectedStudios = [
     'Memphis/Perkins at Poplar',
     'Memphis/Poplar at Kirby',
     'Naples Mercato',
-    'Nashville/Green Hills'
+    'Nashville/Green Hills',
+    'Kenosha',
+    'Migrate Test Studio'
   ];
