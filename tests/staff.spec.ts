@@ -58,9 +58,10 @@ test('staffPage', async ({ page }) => {
     // await page.waitForTimeout(1000); // Adjust timeout for search results to load
 
   //  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();
-  //  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();
-   await expect(page.locator(`#p-multiselect-label:has-text(Edmond Oklahoma)`)).toBeVisible();
-   
+   //await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();
+   //await expect(page.locator(`#p-multiselect-label:has-text(Edmond Oklahoma)`)).toBeVisible();
+   await expect(page.getByRole('combobox',{name: 'Edmond Oklahoma'})).toBeVisible();
+   //getByRole('combobox', { name: 'Edmond Oklahoma' })
     // Verify the table heading is visible
     await expect(page.getByText('Actions Name Last Name Roles Email Creation Time Action')).toBeVisible();
   } catch (error) {
@@ -95,14 +96,16 @@ test('creating a new staff', async ({ page }) => {
 async function fillStaffDetails(page) {
   await page.getByRole('button', { name: 'Create New Staff' }).click();
 
-  await page.getByLabel('Stress Address').fill(firstName);
+  //await page.getByLabel('Stress Address').fill(firstName);
+  await page.awaitForTimeOut(2000)
+  await page.locator('//label[normalize-space()="First Name *"]').fill(firstName)
   await page.locator('app-input').filter({ hasText: 'Last Name *' }).locator('#face-value').fill(lastName);
   await page.locator('app-date-picker #face-value').fill(dateOfBirth);
   await page.getByLabel('Gender *').click();
   await page.getByLabel(gender, { exact: true }).click();
   await page.locator('input[type="email"]').fill(email);
   await page.locator('app-input').filter({ hasText: 'Phone Number *' }).locator('#face-value').fill(phoneNumber);
-  await page.locator('app-input').filter({ hasText: 'Stress Address *' }).locator('#face-value').fill(streetAddress);
+  await page.locator('app-input').filter({ hasText: 'Street Address *' }).locator('#face-value').fill(streetAddress);
   await page.locator('app-input').filter({ hasText: 'City *' }).locator('#face-value').fill(city);
   await page.locator('#pn_id_17 #face-value').click();
   await page.getByLabel(state).click();

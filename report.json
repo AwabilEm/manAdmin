@@ -18,8 +18,8 @@
       [
         "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/node_modules/monocart-reporter/lib/index.js",
         {
-          "name": "My Test Report 2024-07-24",
-          "outputFile": "./test-results/2024-07-24/index.html"
+          "name": "My Test Report 2024-08-07",
+          "outputFile": "./test-results/2024-08-07/index.html"
         }
       ],
       [
@@ -88,46 +88,6 @@
   },
   "suites": [
     {
-      "title": "../global-setup.ts",
-      "file": "../global-setup.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 600000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "setup",
-              "projectName": "setup",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 51994,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-07-24T18:01:20.342Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "13722ad43cd6b8b1aa42-d4801ea111b753ac1a24",
-          "file": "../global-setup.ts",
-          "line": 3,
-          "column": 9
-        }
-      ]
-    },
-    {
       "title": "staff.spec.ts",
       "file": "staff.spec.ts",
       "column": 0,
@@ -146,56 +106,41 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "status": "failed",
-                  "duration": 48954,
+                  "workerIndex": 2,
+                  "status": "timedOut",
+                  "duration": 600190,
                   "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:62:81",
-                    "location": {
-                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                      "column": 81,
-                      "line": 62
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[90m//  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[90m//  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m    \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m`#p-multiselect-label:has-text(Edmond Oklahoma)`\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m    \n \u001b[90m 64 |\u001b[39m     \u001b[90m// Verify the table heading is visible\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Actions Name Last Name Roles Email Creation Time Action'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
                   },
                   "errors": [
                     {
-                      "location": {
-                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                        "column": 81,
-                        "line": 62
-                      },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\u001b[22m\n\n\n\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[90m//  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[90m//  await expect(page.getByLabel('Edmond Oklahoma')).toBeVisible();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m    \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m`#p-multiselect-label:has-text(Edmond Oklahoma)`\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m    \n \u001b[90m 64 |\u001b[39m     \u001b[90m// Verify the table heading is visible\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Actions Name Last Name Roles Email Creation Time Action'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:62:81\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "Visible dropdown options: [\n  \u001b[32m'All Studios'\u001b[39m,\n  \u001b[32m'Brentwood/Hill Center'\u001b[39m,\n  \u001b[32m'Downtown Franklin'\u001b[39m,\n  \u001b[32m'Memphis/Perkins at Poplar'\u001b[39m,\n  \u001b[32m'Houston'\u001b[39m,\n  \u001b[32m'Nashville/Green Hills'\u001b[39m,\n  \u001b[32m'Memphis/Poplar at Kirby'\u001b[39m,\n  \u001b[32m'Austin/Lakeway'\u001b[39m,\n  \u001b[32m'Dallas/Preston Center (Next to Starbucks)'\u001b[39m,\n  \u001b[32m'Chicago_Libertyville'\u001b[39m,\n  \u001b[32m'Chicago Glenview'\u001b[39m,\n  \u001b[32m'Chicago Lakeview'\u001b[39m,\n  \u001b[32m'Naples Mercato'\u001b[39m,\n  \u001b[32m'Little Rock - Chenal'\u001b[39m,\n  \u001b[32m'Charlotte/Stonecrest'\u001b[39m,\n  \u001b[32m'Birmingham/Homewood'\u001b[39m,\n  \u001b[32m'Manduu Collierville'\u001b[39m,\n  \u001b[32m'Edmond Oklahoma'\u001b[39m,\n  \u001b[32m'Migrate Test Studio'\u001b[39m\n]\n"
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
                     },
                     {
-                      "text": "All expected options are visible.\n"
+                      "location": {
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 53,
+                        "line": 34
+                      },
+                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('link', { name: 'Staff' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[90m// Click on the Staff link\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m     \u001b[90m// Click on the All Staff link\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m' All Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:34:53\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [
                     {
-                      "text": "Error occurred during staffPage test: ExpectError: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\u001b[22m\n\n    at \u001b[90m/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:62:81 {\n  matcherResult: {\n    message: \u001b[32m'\\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m'\\n'\u001b[39m +\n      \u001b[32m\"Locator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\n\"\u001b[39m +\n      \u001b[32m'Expected: visible\\n'\u001b[39m +\n      \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n      \u001b[32m'Call log:\\n'\u001b[39m +\n      \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m\"\\x1B[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\x1B[22m\\n\"\u001b[39m,\n    pass: \u001b[33mfalse\u001b[39m,\n    actual: \u001b[32m'hidden'\u001b[39m,\n    name: \u001b[32m'toBeVisible'\u001b[39m,\n    expected: \u001b[32m'visible'\u001b[39m,\n    log: [\n      \u001b[32m'expect.toBeVisible with timeout 5000ms'\u001b[39m,\n      \u001b[32m\"waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\"\u001b[39m\n    ],\n    timeout: \u001b[33m5000\u001b[39m\n  },\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'expect@34'\u001b[39m,\n    category: \u001b[32m'expect'\u001b[39m,\n    title: \u001b[32m'expect.toBeVisible'\u001b[39m,\n    params: \u001b[90mundefined\u001b[39m,\n    wallTime: \u001b[33m1721844177501\u001b[39m,\n    infectParentStepsWithError: \u001b[90mundefined\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    location: {\n      file: \u001b[32m'/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts'\u001b[39m,\n      line: \u001b[33m62\u001b[39m,\n      column: \u001b[33m81\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    steps: [ \u001b[36m[Object]\u001b[39m ],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1721844182515\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: \\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"Locator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\n\"\u001b[39m +\n        \u001b[32m'Expected: visible\\n'\u001b[39m +\n        \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: \\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoBeVisible\\x1B[2m()\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"Locator: locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\n\"\u001b[39m +\n        \u001b[32m'Expected: visible\\n'\u001b[39m +\n        \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m'  \\x1B[2m- expect.toBeVisible with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('#p-multiselect-label:has-text(Edmond Oklahoma)')\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:62:81'\u001b[39m\n    }\n  }\n}\n"
+                      "text": "Error occurred during staffPage test: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('link', { name: 'Staff' })\u001b[22m\n\n    at \u001b[90m/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:34:53 {\n  name: \u001b[32m'Error'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@12'\u001b[39m,\n    location: {\n      file: \u001b[32m'/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts'\u001b[39m,\n      line: \u001b[33m34\u001b[39m,\n      column: \u001b[33m53\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"locator.getByRole('link', { name: 'Staff' }).click\"\u001b[39m,\n    apiName: \u001b[32m'locator.click'\u001b[39m,\n    params: { selector: \u001b[32m'internal:role=link[name=\"Staff\"i]'\u001b[39m, strict: \u001b[33mtrue\u001b[39m },\n    wallTime: \u001b[33m1723160818113\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [ \u001b[36m[Object]\u001b[39m ],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1723161246262\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: locator.click: Test timeout of 600000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for getByRole('link', { name: 'Staff' })\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: locator.click: Test timeout of 600000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for getByRole('link', { name: 'Staff' })\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:34:53'\u001b[39m\n    }\n  }\n}\n"
                     }
                   ],
                   "retry": 0,
-                  "startTime": "2024-07-24T18:02:13.698Z",
+                  "startTime": "2024-08-08T23:44:05.998Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "../staff-staffPage-chromium/test-failed-1.png"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                    "column": 81,
-                    "line": 62
-                  }
+                  ]
                 }
               ],
               "status": "unexpected"
@@ -219,9 +164,9 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "status": "timedOut",
-                  "duration": 30223361,
+                  "duration": 600098,
                   "error": {
                     "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
@@ -234,19 +179,19 @@
                       "location": {
                         "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
                         "column": 64,
-                        "line": 96
+                        "line": 97
                       },
-                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 94 |\u001b[39m \u001b[90m// Function to fill in staff details\u001b[39m\n \u001b[90m 95 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillStaffDetails(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 96 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 97 |\u001b[39m\n \u001b[90m 98 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Stress Address'\u001b[39m)\u001b[33m.\u001b[39mfill(firstName)\u001b[33m;\u001b[39m\n \u001b[90m 99 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-input'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'Last Name *'\u001b[39m })\u001b[33m.\u001b[39mlocator(\u001b[32m'#face-value'\u001b[39m)\u001b[33m.\u001b[39mfill(lastName)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at fillStaffDetails (/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:96:64)\u001b[22m\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:80:11\u001b[22m"
+                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n\n\u001b[0m \u001b[90m  95 |\u001b[39m \u001b[90m// Function to fill in staff details\u001b[39m\n \u001b[90m  96 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillStaffDetails(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  97 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  98 |\u001b[39m\n \u001b[90m  99 |\u001b[39m   \u001b[90m//await page.getByLabel('Stress Address').fill(firstName);\u001b[39m\n \u001b[90m 100 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mawaitForTimeOut(\u001b[35m2000\u001b[39m)\u001b[0m\n\n\u001b[2m    at fillStaffDetails (/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:97:64)\u001b[22m\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:81:11\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [
                     {
-                      "text": "Error occurred during creating a new staff: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n    at fillStaffDetails \u001b[90m(/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:96:64\u001b[90m)\u001b[39m\n    at \u001b[90m/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:80:11 {\n  name: \u001b[32m'Error'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@12'\u001b[39m,\n    location: {\n      file: \u001b[32m'/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts'\u001b[39m,\n      line: \u001b[33m96\u001b[39m,\n      column: \u001b[33m64\u001b[39m,\n      function: \u001b[32m'fillStaffDetails'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"locator.getByRole('button', { name: 'Create New Staff' }).click\"\u001b[39m,\n    apiName: \u001b[32m'locator.click'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:role=button[name=\"Create New Staff\"i]'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m\n    },\n    wallTime: \u001b[33m1721844206581\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [ \u001b[36m[Object]\u001b[39m ],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1721874406666\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: locator.click: Test timeout of 600000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: locator.click: Test timeout of 600000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at fillStaffDetails (/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:96:64)\\n'\u001b[39m +\n        \u001b[32m'    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:80:11'\u001b[39m\n    }\n  }\n}\n"
+                      "text": "Error occurred during creating a new staff: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n    at fillStaffDetails \u001b[90m(/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:97:64\u001b[90m)\u001b[39m\n    at \u001b[90m/Users/awabil/Desktop/Mnaduu/admin/manAdmin/\u001b[39mtests/staff.spec.ts:81:11 {\n  name: \u001b[32m'Error'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@12'\u001b[39m,\n    location: {\n      file: \u001b[32m'/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts'\u001b[39m,\n      line: \u001b[33m97\u001b[39m,\n      column: \u001b[33m64\u001b[39m,\n      function: \u001b[32m'fillStaffDetails'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"locator.getByRole('button', { name: 'Create New Staff' }).click\"\u001b[39m,\n    apiName: \u001b[32m'locator.click'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:role=button[name=\"Create New Staff\"i]'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m\n    },\n    wallTime: \u001b[33m1723161498792\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [ \u001b[36m[Object]\u001b[39m ],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1723161847016\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: locator.click: Test timeout of 600000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: locator.click: Test timeout of 600000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"  \\x1B[2m- waiting for getByRole('button', { name: 'Create New Staff' })\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at fillStaffDetails (/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:97:64)\\n'\u001b[39m +\n        \u001b[32m'    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:81:11'\u001b[39m\n    }\n  }\n}\n"
                     }
                   ],
                   "retry": 0,
-                  "startTime": "2024-07-24T18:03:03.235Z",
+                  "startTime": "2024-08-08T23:54:06.806Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -261,7 +206,7 @@
           ],
           "id": "2545a61da953aa54eb88-189f8b624bab4e58c42a",
           "file": "staff.spec.ts",
-          "line": 72,
+          "line": 73,
           "column": 5
         },
         {
@@ -277,9 +222,9 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "status": "timedOut",
-                  "duration": 3238001,
+                  "duration": 600162,
                   "error": {
                     "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
@@ -291,16 +236,16 @@
                     {
                       "location": {
                         "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                        "column": 14,
-                        "line": 174
+                        "column": 64,
+                        "line": 178
                       },
-                      "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m test(\u001b[32m'Checking for requirement to be present to create a new staff'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 176 |\u001b[39m\n \u001b[90m 177 |\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:174:14\u001b[22m"
+                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 176 |\u001b[39m test(\u001b[32m'Checking for requirement to be present to create a new staff'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 177 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 178 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 179 |\u001b[39m\n \u001b[90m 180 |\u001b[39m\n \u001b[90m 181 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Create new staff'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:178:64\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-25T02:26:47.396Z",
+                  "startTime": "2024-08-09T00:04:07.561Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -315,7 +260,7 @@
           ],
           "id": "2545a61da953aa54eb88-3015b106db2b385aa350",
           "file": "staff.spec.ts",
-          "line": 173,
+          "line": 176,
           "column": 5
         },
         {
@@ -331,45 +276,37 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "status": "failed",
-                  "duration": 380,
+                  "workerIndex": 5,
+                  "status": "timedOut",
+                  "duration": 600099,
                   "error": {
-                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:229:14",
-                    "location": {
-                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                      "column": 14,
-                      "line": 229
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 229 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 230 |\u001b[39m\n \u001b[90m 231 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 232 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
                   },
                   "errors": [
                     {
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
+                    },
+                    {
                       "location": {
                         "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                        "column": 14,
-                        "line": 229
+                        "column": 61,
+                        "line": 235
                       },
-                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 229 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 230 |\u001b[39m\n \u001b[90m 231 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 232 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:229:14\u001b[22m"
+                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('button:has-text(\"Create New Staff\")')\u001b[22m\n\n\n\u001b[0m \u001b[90m 233 |\u001b[39m\n \u001b[90m 234 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 235 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 236 |\u001b[39m\n \u001b[90m 237 |\u001b[39m   \u001b[90m// Click on country dropdown\u001b[39m\n \u001b[90m 238 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#pn_id_19 [aria-label=\"dropdown trigger\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:235:61\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-25T03:20:46.078Z",
+                  "startTime": "2024-08-09T00:14:08.313Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "../staff-Testing-Country-Dropdown-chromium/test-failed-1.png"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                    "column": 14,
-                    "line": 229
-                  }
+                  ]
                 }
               ],
               "status": "unexpected"
@@ -377,7 +314,7 @@
           ],
           "id": "2545a61da953aa54eb88-ed9824d5601f784df287",
           "file": "staff.spec.ts",
-          "line": 224,
+          "line": 227,
           "column": 5
         },
         {
@@ -393,45 +330,37 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "status": "failed",
-                  "duration": 357,
+                  "workerIndex": 6,
+                  "status": "timedOut",
+                  "duration": 600100,
                   "error": {
-                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:271:14",
-                    "location": {
-                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                      "column": 14,
-                      "line": 271
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 269 |\u001b[39m\n \u001b[90m 270 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 271 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 272 |\u001b[39m\n \u001b[90m 273 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 274 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
                   },
                   "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
+                    },
                     {
                       "location": {
                         "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
                         "column": 14,
-                        "line": 271
+                        "line": 274
                       },
-                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 269 |\u001b[39m\n \u001b[90m 270 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 271 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 272 |\u001b[39m\n \u001b[90m 273 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 274 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:271:14\u001b[22m"
+                      "message": "Error: page.goto: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 272 |\u001b[39m\n \u001b[90m 273 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 274 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 275 |\u001b[39m\n \u001b[90m 276 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 277 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:274:14\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-25T03:20:47.028Z",
+                  "startTime": "2024-08-09T00:24:09.191Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "../staff-Testing-Employee-Type-Dropdown-chromium/test-failed-1.png"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                    "column": 14,
-                    "line": 271
-                  }
+                  ]
                 }
               ],
               "status": "unexpected"
@@ -439,7 +368,7 @@
           ],
           "id": "2545a61da953aa54eb88-eba602b37e0cf75f36df",
           "file": "staff.spec.ts",
-          "line": 266,
+          "line": 269,
           "column": 5
         },
         {
@@ -455,45 +384,37 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "status": "failed",
-                  "duration": 372,
+                  "workerIndex": 7,
+                  "status": "timedOut",
+                  "duration": 600162,
                   "error": {
-                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:324:14",
-                    "location": {
-                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                      "column": 14,
-                      "line": 324
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 322 |\u001b[39m\n \u001b[90m 323 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 324 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 325 |\u001b[39m\n \u001b[90m 326 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 327 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
                   },
                   "errors": [
                     {
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
+                    },
+                    {
                       "location": {
                         "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                        "column": 14,
-                        "line": 324
+                        "column": 61,
+                        "line": 330
                       },
-                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 322 |\u001b[39m\n \u001b[90m 323 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 324 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 325 |\u001b[39m\n \u001b[90m 326 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 327 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:324:14\u001b[22m"
+                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('button:has-text(\"Create New Staff\")')\u001b[22m\n\n\n\u001b[0m \u001b[90m 328 |\u001b[39m\n \u001b[90m 329 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 330 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Create New Staff\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 331 |\u001b[39m\n \u001b[90m 332 |\u001b[39m   \u001b[90m// Click to show the state dropdown\u001b[39m\n \u001b[90m 333 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#pn_id_17 #face-value'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:330:61\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-25T03:20:47.954Z",
+                  "startTime": "2024-08-09T00:34:09.901Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "../staff-Testing-State-Type-Dropdown-chromium/test-failed-1.png"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                    "column": 14,
-                    "line": 324
-                  }
+                  ]
                 }
               ],
               "status": "unexpected"
@@ -501,7 +422,7 @@
           ],
           "id": "2545a61da953aa54eb88-d3aab1f24604d2ccce42",
           "file": "staff.spec.ts",
-          "line": 309,
+          "line": 312,
           "column": 5
         },
         {
@@ -517,45 +438,37 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "status": "failed",
-                  "duration": 366,
+                  "workerIndex": 8,
+                  "status": "timedOut",
+                  "duration": 600149,
                   "error": {
-                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:364:14",
-                    "location": {
-                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                      "column": 14,
-                      "line": 364
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 362 |\u001b[39m\n \u001b[90m 363 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 364 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 365 |\u001b[39m\n \u001b[90m 366 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 367 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
                   },
                   "errors": [
                     {
+                      "message": "\u001b[31mTest timeout of 600000ms exceeded.\u001b[39m"
+                    },
+                    {
                       "location": {
                         "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                        "column": 14,
-                        "line": 364
+                        "column": 64,
+                        "line": 370
                       },
-                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 362 |\u001b[39m\n \u001b[90m 363 |\u001b[39m   \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 364 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 365 |\u001b[39m\n \u001b[90m 366 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 367 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:364:14\u001b[22m"
+                      "message": "Error: locator.click: Test timeout of 600000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('button', { name: 'Create New Staff' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 368 |\u001b[39m\n \u001b[90m 369 |\u001b[39m   \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 370 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 371 |\u001b[39m\n \u001b[90m 372 |\u001b[39m   \u001b[90m// Select Studios\u001b[39m\n \u001b[90m 373 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'div'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[35m/^Studios$/\u001b[39m })\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:370:64\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-25T03:20:48.890Z",
+                  "startTime": "2024-08-09T00:44:10.782Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "../staff-Checking-for-studios-availability-chromium/test-failed-1.png"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
-                    "column": 14,
-                    "line": 364
-                  }
+                  ]
                 }
               ],
               "status": "unexpected"
@@ -563,7 +476,7 @@
           ],
           "id": "2545a61da953aa54eb88-1616ed61bbb4355b13a4",
           "file": "staff.spec.ts",
-          "line": 361,
+          "line": 364,
           "column": 5
         },
         {
@@ -579,26 +492,45 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "status": "timedOut",
-                  "duration": 3442309,
+                  "workerIndex": 9,
+                  "status": "failed",
+                  "duration": 75291,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 600000ms exceeded while setting up \"context\".\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 600000ms exceeded while setting up \"context\".\u001b[39m"
+                    "message": "Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:417:15",
+                    "location": {
+                      "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                      "column": 15,
+                      "line": 417
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 415 |\u001b[39m\n \u001b[90m 416 |\u001b[39m    \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 417 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 418 |\u001b[39m\n \u001b[90m 419 |\u001b[39m    \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 420 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 600000ms exceeded while setting up \"context\".\u001b[39m"
-                    },
-                    {
-                      "message": "Error: Target page, context or browser has been closed"
+                      "location": {
+                        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                        "column": 15,
+                        "line": 417
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://admin.manduu.app/app/main/staff/all\nCall log:\n  \u001b[2m- navigating to \"https://admin.manduu.app/app/main/staff/all\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 415 |\u001b[39m\n \u001b[90m 416 |\u001b[39m    \u001b[90m// Navigate to the staff management page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 417 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://admin.manduu.app/app/main/staff/all'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 418 |\u001b[39m\n \u001b[90m 419 |\u001b[39m    \u001b[90m// Click on 'Create New Staff' button\u001b[39m\n \u001b[90m 420 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Create New Staff'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts:417:15\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-25T03:20:49.839Z",
-                  "attachments": []
+                  "startTime": "2024-08-09T00:54:11.646Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "../staff-test-try-chromium/test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/staff.spec.ts",
+                    "column": 15,
+                    "line": 417
+                  }
                 }
               ],
               "status": "unexpected"
@@ -606,28 +538,17 @@
           ],
           "id": "2545a61da953aa54eb88-ecad05fc0fd365d4cf20",
           "file": "staff.spec.ts",
-          "line": 411,
+          "line": 414,
           "column": 5
         }
       ]
     }
   ],
-  "errors": [
-    {
-      "message": "SyntaxError: /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/tryme.spec.ts: Missing semicolon. (40:58)\n\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Client *'\u001b[39m))\u001b[33m.\u001b[39mtoBeEmpawait expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Create ContractView ClientsView Invoice'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\u001b[0m",
-      "stack": "SyntaxError: /Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/tryme.spec.ts: Missing semicolon. (40:58)\n\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Client *'\u001b[39m))\u001b[33m.\u001b[39mtoBeEmpawait expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Create ContractView ClientsView Invoice'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\u001b[0m",
-      "location": {
-        "file": "/Users/awabil/Desktop/Mnaduu/admin/manAdmin/tests/tryme.spec.ts",
-        "line": 40,
-        "column": 58
-      },
-      "snippet": "\u001b[90m   at \u001b[39mtryme.spec.ts:40\n\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Client *'\u001b[39m))\u001b[33m.\u001b[39mtoBeEmpawait expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'Unlimifit OK'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Create ContractView ClientsView Invoice'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Contract Template *'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\u001b[0m"
-    }
-  ],
+  "errors": [],
   "stats": {
-    "startTime": "2024-07-24T18:01:18.914Z",
-    "duration": 37013357.598000005,
-    "expected": 1,
+    "startTime": "2024-08-08T23:44:04.686Z",
+    "duration": 4282343.874000013,
+    "expected": 0,
     "skipped": 0,
     "unexpected": 8,
     "flaky": 0
